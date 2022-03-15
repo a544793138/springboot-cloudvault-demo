@@ -1,5 +1,5 @@
 /.idea/
-/.attach_pid873921
-/.attach_pid874789
+/.attach_*
 /springboot-web-vault-client/target/
 /springboot-webflux-vault-client/target/
+/vault-server/vault/

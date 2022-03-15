@@ -13,9 +13,6 @@ public class SecretController {
     @Autowired
     private TestBean testBean;
 
-    @Autowired
-    private VaultTemplate vaultTemplate;
-
     @GetMapping("/pwd")
     public String getPassword() {
         return testBean.getPassword();
