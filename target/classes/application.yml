@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  # 配置时都以 `vault://` 开头
+  # 表示需要将 vault 下哪个路径的 secret 加载到 PropertySource 中，从而在 springboot 中可以直接注入
+  config.import: vault://mpcs/database, vault://mpcs/server.ssl
+  cloud.vault:
+    # 是否启用 vault，默认为 true。当这个为 false 时，`spring.config.import` 一定不可以存在（需要注释掉，否则会报错）
+    enabled: true
+    # 使用证书认证方式
+    authentication: CERT
+    # 使用 SSL
+    ssl:
+      # 配置是都以 `file:` 开头
+      key-store: file:/home/user/projects/springboot-cloudvault-demo/vault-server/bash/work/client-cert.jks
+      key-store-password: changeit
+      # 默认为 JKS，可以不填，支持 PEM
+      key-store-type: JKS
+      # 配置是都以 `file:` 开头
+      trust-store: file:/home/user/projects/springboot-cloudvault-demo/vault-server/bash/work/keystore.jks
+      # 默认为 JKS，可以不填，支持 PEM
+      trust-store-password: changeit
+      # 默认为 JKS，可以不填，支持 PEM
+      trust-store-type: JKS
+    # vault 的地址
+    uri: https://localhost:8200
+
+password: local
