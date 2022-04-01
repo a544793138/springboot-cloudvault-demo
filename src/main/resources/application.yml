@@ -12,6 +12,8 @@ spring:
     authentication: CERT
     # 使用 SSL
     ssl:
+      # 证书认证的路径，默认为 cert
+      cert-auth-path: cert
       # 配置是都以 `file:` 开头
       key-store: file:/home/user/projects/springboot-cloudvault-demo/vault-server/bash/work/client-cert.jks
       key-store-password: changeit
@@ -27,4 +29,3 @@ spring:
     uri: https://localhost:8200
 
 password: local
-key-store-password: local

@@ -1,4 +1,4 @@
-package com.tjwoods.webflux.vault.client;
+package client;
 
 public class TestBean {
 

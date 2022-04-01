@@ -1,4 +1,4 @@
-package com.tjwoods.web.vault.client;
+package client;
 
 import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
 import org.springframework.context.ApplicationListener;
