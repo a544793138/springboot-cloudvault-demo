@@ -8,7 +8,7 @@ public class WebApplication {
 
     public static void main(String[] args) {
         final SpringApplication springApplication = new SpringApplication(WebApplication.class);
-        springApplication.addListeners(new ApplicationPreparedListener());
+        springApplication.addListeners(new VaultConfigListener());
         springApplication.run(args);
     }
 }

@@ -3,3 +3,4 @@
 /springboot-web-vault-client/target/
 /springboot-webflux-vault-client/target/
 /vault-server/vault/
+/target/
